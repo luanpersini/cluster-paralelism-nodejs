@@ -1,0 +1,35 @@
+{
+  "name": "nodejs_cluster_paralelism",
+  "version": "1.0.0",
+  "description": "Concurrent x paralell processes",
+  "main": "app.js",
+  "scripts": {
+    "noCluster": "nodemon no-cluster",
+    "withCluster": "nodemon with-cluster",
+    "siegeWC": "node siege.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luanpersini/nodejs_cluster_paralelism.git"
+  },
+  "keywords": [
+    "nodejs",
+    "cluster",
+    "paralelism",
+    "loadballancer",
+    "workers",
+    "threads"
+  ],
+  "author": "Luan Persini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luanpersini/nodejs_cluster_paralelism/issues"
+  },
+  "homepage": "https://github.com/luanpersini/nodejs_cluster_paralelism#readme",
+  "dependencies": {
+    "express": "^4.17.1"   
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
