@@ -5,7 +5,6 @@ const testFunction = require('./test-function')
 const port = process.env.PORT || 5051;
 const server = app.listen(port, () => { console.log(`Listening on port ${port}...`); });
 
-  // e7 = 7 zeros
 app.get('/', (req, res, next) => {
   testFunction()
   res.send('Hi there! Process completed.');
