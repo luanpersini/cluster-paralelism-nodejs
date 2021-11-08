@@ -4,15 +4,15 @@ Node runs as single-threaded using concurrent processing by default, but can be 
 
 
 > # How it works
-
+>
 > The worker processes are spawned using the child_process.fork() method, so that they can communicate with the parent via IPC and pass server handles back and forth.
-
+>
 > The cluster module supports two methods of distributing incoming connections.
-
+>
 > The first one (and the default one on all platforms except Windows), is the round-robin approach, where the primary process listens on a port, accepts new connections and distributes them across the workers in a round-robin fashion, with some built-in smarts to avoid overloading a worker process.
-
+>
 > The second approach is where the primary process creates the listen socket and sends it to interested workers. The workers then accept incoming connections directly.
-
+>
 > The second approach should, in theory, give the best performance. In practice however, distribution tends to be very unbalanced due to operating system scheduler vagaries. Loads have been observed where over 70% of all connections ended up in just two processes, out of a total of eight.
 
 To know more, please read (https://nodejs.org/api/cluster.html#cluster_how_it_works)
